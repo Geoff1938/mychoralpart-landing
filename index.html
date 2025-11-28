@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MyChoralPart - Practice your choral part with our free online MIDI player. Perfect for SATB choir members who want to rehearse their individual voice parts.">
-    <meta name="keywords" content="choir practice, MIDI player, SATB, vocal practice, choral rehearsal, voice parts">
+    <meta name="description" content="MyChoralPart - Practice your choral part with our online MIDI player. Perfect for choir members who want to rehearse their individual voice parts.">
+    <meta name="keywords" content="choir practice, MIDI player, SATB, vocal practice, choral rehearsal, voice parts, soprano, alto, tenor, bass">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="MyChoralPart - Practice Your Choral Part Online">
+    <meta property="og:description" content="Free online rehearsal aid for choir members. Isolate your voice part, control tempo, and practice anywhere.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mychoralpart.com">
+    
     <title>MyChoralPart - Practice Your Choral Part Online</title>
+    
+    <!-- Favicon (add your favicon files) -->
+    <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg"> -->
     
     <style>
         * {
@@ -28,61 +38,44 @@
             padding: 0 20px;
         }
         
-        /* Header */
-        header {
-            padding: 20px 0;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        /* Hero Section */
+        .hero {
+            padding: 25px 0 40px;
         }
         
-        .header-content {
-            display: flex;
-            justify-content: space-between;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 50px;
             align-items: center;
         }
         
-        .logo {
-            height: 50px;
-        }
-        
-        .cta-button-header {
-            background: #3498DB;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        
-        .cta-button-header:hover {
-            background: #2980B9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #2C3E50;
-        }
-        
-        .hero .tagline {
-            font-size: 24px;
-            color: #7F8C8D;
-            margin-bottom: 40px;
+        .hero-logo-column {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
         
         .hero-logo {
-            max-width: 300px;
-            margin: 0 auto 40px;
+            height: 259px;
+            width: auto;
+        }
+        
+        .hero-content {
+            text-align: left;
+        }
+        
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin: 0 0 15px 0;
+        }
+        
+        .hero .tagline {
+            font-size: 22px;
+            color: #7F8C8D;
+            margin-bottom: 6px;
         }
         
         .cta-button-primary {
@@ -105,14 +98,15 @@
         }
         
         .hero-subtitle {
-            margin-top: 20px;
+            margin-top: 0;
+            margin-bottom: 25px;
             color: #95A5A6;
             font-size: 16px;
         }
         
         /* Features Section */
         .features {
-            padding: 60px 0;
+            padding: 35px 0 60px;
             background: white;
         }
         
@@ -135,7 +129,7 @@
             padding: 30px;
             border-radius: 12px;
             background: #f8f9fa;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
         .feature-card:hover {
@@ -146,6 +140,7 @@
         .feature-icon {
             font-size: 48px;
             margin-bottom: 20px;
+            display: block;
         }
         
         .feature-card h3 {
@@ -159,57 +154,10 @@
             line-height: 1.6;
         }
         
-        /* Voice Parts Section */
-        .voice-parts {
-            padding: 60px 0;
-        }
-        
-        .voice-parts h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #2C3E50;
-        }
-        
-        .voice-parts-description {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-size: 18px;
-            color: #7F8C8D;
-        }
-        
-        .voice-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .voice-card {
-            padding: 30px;
-            border-radius: 12px;
-            color: white;
-            text-align: center;
-            font-weight: 600;
-            font-size: 20px;
-            transition: transform 0.2s ease;
-        }
-        
-        .voice-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .voice-soprano { background: #E74C3C; }
-        .voice-alto { background: #3498DB; }
-        .voice-tenor { background: #2ECC71; }
-        .voice-bass { background: #9B59B6; }
-        
         /* How It Works */
         .how-it-works {
-            padding: 60px 0;
-            background: white;
+            padding: 35px 0 60px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
         
         .how-it-works h2 {
@@ -257,8 +205,9 @@
         
         /* CTA Section */
         .final-cta {
-            padding: 80px 0;
+            padding: 35px 0 80px;
             text-align: center;
+            background: white;
         }
         
         .final-cta h2 {
@@ -294,18 +243,44 @@
             text-decoration: underline;
         }
         
+        .footer-links {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .footer-links a {
+            margin: 0 10px;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero-logo {
+                height: 120px;
+            }
+            
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             
             .hero .tagline {
-                font-size: 20px;
+                font-size: 18px;
             }
             
             .features h2,
-            .voice-parts h2,
             .how-it-works h2 {
                 font-size: 28px;
             }
@@ -314,134 +289,164 @@
                 padding: 16px 32px;
                 font-size: 18px;
             }
+            
+            .final-cta h2 {
+                font-size: 32px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-logo {
+                height: 100px;
+            }
+            
+            .hero h1 {
+                font-size: 26px;
+            }
+            
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="logo-horizontal.svg" alt="MyChoralPart" class="logo">
-                <a href="https://player.mychoralpart.com" class="cta-button-header">Launch Player</a>
-            </div>
-        </div>
-    </header>
-
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <img src="logo-main.svg" alt="MyChoralPart Logo" class="hero-logo">
-            <h1>Practice Your Choral Part, Anytime</h1>
-            <p class="tagline">Free online MIDI player for choir members</p>
-            <a href="https://player.mychoralpart.com" class="cta-button-primary">Start Practicing Now</a>
-            <p class="hero-subtitle">No sign-up required • Works on any device • Completely free</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choir Members Love MyChoralPart</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎵</div>
-                    <h3>Isolate Your Part</h3>
-                    <p>Listen to just your vocal part (Soprano, Alto, Tenor, or Bass) or blend it with other voices.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">⏯️</div>
-                    <h3>Full Playback Control</h3>
-                    <p>Play, pause, rewind, and adjust tempo to match your learning pace.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Practice Anywhere</h3>
-                    <p>Works on desktop, tablet, and mobile. Practice at home, on the bus, or wherever you are.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎼</div>
-                    <h3>MIDI File Support</h3>
-                    <p>Upload your choir's MIDI files and start practicing immediately. Compatible with standard MIDI format.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
-                    <h3>Always Free</h3>
-                    <p>No subscriptions, no hidden fees. Just a simple tool to help you learn your part.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Private & Secure</h3>
-                    <p>Your files stay in your browser. No registration required, no data collected.</p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-logo-column">
+                        <svg class="hero-logo" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Square icon background -->
+                            <rect x="40" y="40" width="140" height="140" rx="20" fill="white" stroke="#E8E8E8" stroke-width="3"/>
+                            
+                            <!-- Four layers with labels -->
+                            <rect x="60" y="68" width="100" height="16" rx="8" fill="#E74C3C" opacity="0.9"/>
+                            <text x="70" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">S</text>
+                            
+                            <rect x="60" y="92" width="100" height="16" rx="8" fill="#3498DB" opacity="0.9"/>
+                            <text x="70" y="104" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">A</text>
+                            
+                            <rect x="60" y="116" width="100" height="16" rx="8" fill="#2ECC71" opacity="0.9"/>
+                            <text x="70" y="128" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">T</text>
+                            
+                            <rect x="60" y="140" width="100" height="16" rx="8" fill="#9B59B6" opacity="0.9"/>
+                            <text x="70" y="152" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">B</text>
+                            
+                            <!-- Quarter note -->
+                            <ellipse cx="108" cy="124" rx="8" ry="6" fill="#2C3E50" transform="rotate(-20 108 124)"/>
+                            <rect x="113.5" y="86" width="2.5" height="38" fill="#2C3E50"/>
+                            
+                            <!-- Text below -->
+                            <text x="110" y="200" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2C3E50" text-anchor="middle">mychoralpart</text>
+                        </svg>
+                    </div>
+                    <div class="hero-content">
+                        <h1>Practice Your Choral Part</h1>
+                        <p class="tagline">Online rehearsal aid for choir members</p>
+                        <p class="hero-subtitle">No sign-up required • Works on any device</p>
+                        <a href="https://player.mychoralpart.com" class="cta-button-primary">Launch Player</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Voice Parts Section -->
-    <section class="voice-parts">
-        <div class="container">
-            <h2>Perfect for All Voice Parts</h2>
-            <p class="voice-parts-description">
-                Whether you're a Soprano, Alto, Tenor, or Bass, MyChoralPart helps you master your part with color-coded voice isolation.
-            </p>
-            <div class="voice-grid">
-                <div class="voice-card voice-soprano">Soprano</div>
-                <div class="voice-card voice-alto">Alto</div>
-                <div class="voice-card voice-tenor">Tenor</div>
-                <div class="voice-card voice-bass">Bass</div>
+        <!-- Features Section -->
+        <section class="features" aria-labelledby="features-heading">
+            <div class="container">
+                <h2 id="features-heading">Why choir members love MyChoralPart</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon" role="img" aria-label="Musical notes">🎵</span>
+                        <h3>Isolate Your Part</h3>
+                        <p>Accentuate your vocal part (Soprano, Alto, Tenor, or Bass) or blend or mute it.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="feature-icon" role="img" aria-label="Play button">▶️</span>
+                        <h3>Full Playback Control</h3>
+                        <p>Play, pause, rewind, and adjust tempo as necessary.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="feature-icon" role="img" aria-label="Mobile phone">📱</span>
+                        <h3>Practice Anywhere</h3>
+                        <p>Works on desktop, tablet, and mobile. Practice at home, on the bus, or wherever you are.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="feature-icon" role="img" aria-label="Sheet music">🎼</span>
+                        <h3>Extensive Library</h3>
+                        <p>Quickly find the work you want to rehearse from the thousands in our library.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="feature-icon" role="img" aria-label="Free">🆓</span>
+                        <h3>Free</h3>
+                        <p>No subscriptions, no hidden fees. Just a simple tool to help you learn your part.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="feature-icon" role="img" aria-label="Lock">🔒</span>
+                        <h3>Private &amp; Secure</h3>
+                        <p>No registration required. Just open and start practicing.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Upload Your MIDI</h3>
-                    <p>Get a MIDI file from your choir director or find one online. Just drag and drop it into the player.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Select Your Part</h3>
-                    <p>Choose your voice part (S, A, T, or B). You can mute other parts or adjust their volume.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Practice!</h3>
-                    <p>Listen, repeat, slow down difficult sections. Practice until you've got it down perfectly.</p>
+        <!-- How It Works Section -->
+        <section class="how-it-works" aria-labelledby="how-it-works-heading">
+            <div class="container">
+                <h2 id="how-it-works-heading">How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Find Your Music</h3>
+                        <p>Use the "Find music" tab to search by composer or the name of the work.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Rehearse</h3>
+                        <p>Use the play music tab to listen, repeat, and slow down difficult sections.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Customise</h3>
+                        <p>Use the settings tab to select your voice part and adjust bar number display for the current movement.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Share</h3>
+                        <p>Copy the URL from the settings tab to share a particular work with other choir members.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Ready to Practice?</h2>
-            <p>Join choir members already using MyChoralPart to perfect their parts</p>
-            <a href="https://player.mychoralpart.com" class="cta-button-primary">Open the Player</a>
-        </div>
-    </section>
+        <!-- Final CTA Section -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Ready to Practice?</h2>
+                <p>Join choir members already using MyChoralPart to perfect their parts</p>
+                <a href="https://player.mychoralpart.com" class="cta-button-primary">Open the Player</a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 MyChoralPart. All rights reserved.</p>
+            <p>&copy; 2025 MyChoralPart. All rights reserved.</p>
+            <p>Music files copyright John Hooper: <a href="https://learnchoralmusic.co.uk">learnchoralmusic.co.uk</a></p>
             <p>Made with ♪ for choir members everywhere</p>
-            <p style="margin-top: 20px; font-size: 14px;">
-                Questions or feedback? <a href="mailto:hello@mychoralpart.com">hello@mychoralpart.com</a>
-            </p>
+            <div class="footer-links">
+                <a href="mailto:hello@mychoralpart.com">Contact Us</a>
+                <!-- Add these when you have the pages ready -->
+                <!-- <a href="/privacy">Privacy Policy</a> -->
+                <!-- <a href="/terms">Terms of Use</a> -->
+            </div>
         </div>
     </footer>
 </body>
