@@ -1,22 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MyChoralPart - Practice your choral part with our online MIDI player. Perfect for choir members who want to rehearse their individual voice parts.">
-    <meta name="keywords" content="choir practice, MIDI player, SATB, vocal practice, choral rehearsal, voice parts, soprano, alto, tenor, bass">
-    
+    <title>MyChoralPart - Free Choir Part Practice Online (SATB)</title>
+    <meta name="description" content="Free online choir rehearsal aid. Learn your soprano, alto, tenor or bass part from nearly 1,500 choral works: isolate your part, slow the tempo and practise on any device.">
+    <link rel="canonical" href="https://mychoralpart.com/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#2C3E50">
+
     <!-- Open Graph / Social Media -->
+    <meta property="og:site_name" content="MyChoralPart">
     <meta property="og:title" content="MyChoralPart - Practice Your Choral Part Online">
-    <meta property="og:description" content="Free online rehearsal aid for choir members. Isolate your voice part, control tempo, and practice anywhere.">
+    <meta property="og:description" content="Free online rehearsal aid for choir members. Isolate your voice part, control tempo, and practise anywhere.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mychoralpart.com">
-    
-    <title>MyChoralPart - Practice Your Choral Part Online</title>
-    
-    <!-- Favicon (add your favicon files) -->
-    <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg"> -->
-    
+    <meta property="og:url" content="https://mychoralpart.com/">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image" content="https://mychoralpart.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MyChoralPart logo: four coloured bars labelled S, A, T and B with a musical note">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MyChoralPart - Practice Your Choral Part Online">
+    <meta name="twitter:description" content="Free online rehearsal aid for choir members. Isolate your voice part, control tempo, and practise anywhere.">
+    <meta name="twitter:image" content="https://mychoralpart.com/og-image.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://mychoralpart.com/#org",
+          "name": "MyChoralPart",
+          "url": "https://mychoralpart.com/",
+          "logo": "https://mychoralpart.com/apple-touch-icon.png",
+          "email": "hello@mychoralpart.com"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://mychoralpart.com/#website",
+          "name": "MyChoralPart",
+          "url": "https://mychoralpart.com/",
+          "inLanguage": "en-GB",
+          "publisher": { "@id": "https://mychoralpart.com/#org" }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "MyChoralPart Player",
+          "url": "https://player.mychoralpart.com/",
+          "applicationCategory": "MusicApplication",
+          "operatingSystem": "Any (runs in a web browser)",
+          "description": "Online rehearsal aid for choir members: play any of nearly 1,500 choral works, accentuate or mute your soprano, alto, tenor or bass part, and slow the tempo for difficult passages.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "publisher": { "@id": "https://mychoralpart.com/#org" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is MyChoralPart really free?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. There are no subscriptions, no fees and no account to create. Just open the player and start practising." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which voice parts can I practise?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Soprano, alto, tenor and bass. You can make your own part louder than the others, blend it with the rest of the choir, or mute it so you can sing it yourself." }
+            },
+            {
+              "@type": "Question",
+              "name": "What music is available?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Nearly 1,500 works by over 400 composers, from Handel's Messiah, Fauré's Requiem and Mozart's Requiem to Vivaldi's Gloria, Brahms' German Requiem, Mendelssohn's Elijah, Haydn's Nelson Mass and Elgar's Dream of Gerontius." }
+            },
+            {
+              "@type": "Question",
+              "name": "What are part-learning files?",
+              "acceptedAnswer": { "@type": "Answer", "text": "They are MIDI recordings of a choral work in which each voice part is a separate track. The player uses them to bring your part to the front so you can learn the notes and rhythms by ear." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to install anything?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. MyChoralPart runs in your web browser on phones, tablets and computers." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -74,7 +152,7 @@
         
         .hero .tagline {
             font-size: 22px;
-            color: #7F8C8D;
+            color: #4A5A6A;
             margin-bottom: 6px;
         }
         
@@ -100,7 +178,7 @@
         .hero-subtitle {
             margin-top: 0;
             margin-bottom: 25px;
-            color: #95A5A6;
+            color: #4A5A6A;
             font-size: 16px;
         }
         
@@ -150,7 +228,7 @@
         }
         
         .feature-card p {
-            color: #7F8C8D;
+            color: #55606B;
             line-height: 1.6;
         }
         
@@ -199,15 +277,53 @@
         }
         
         .step p {
-            color: #7F8C8D;
+            color: #4A5A6A;
             line-height: 1.6;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 35px 0 60px;
+            background: white;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2C3E50;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq details {
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            padding: 0 20px;
+        }
+
+        .faq summary {
+            cursor: pointer;
+            font-size: 19px;
+            font-weight: 600;
+            padding: 16px 0;
+            color: #2C3E50;
+        }
+
+        .faq details p {
+            color: #4A5A6A;
+            padding-bottom: 16px;
         }
         
         /* CTA Section */
         .final-cta {
             padding: 35px 0 80px;
             text-align: center;
-            background: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
         
         .final-cta h2 {
@@ -218,7 +334,7 @@
         
         .final-cta p {
             font-size: 20px;
-            color: #7F8C8D;
+            color: #4A5A6A;
             margin-bottom: 40px;
         }
         
@@ -235,21 +351,39 @@
         }
         
         footer a {
-            color: #3498DB;
+            color: #8EC5F0;
             text-decoration: none;
         }
-        
-        footer a:hover {
+
+        footer a:hover,
+        footer a:focus-visible {
             text-decoration: underline;
         }
-        
-        .footer-links {
+
+        .footer-contact {
             margin-top: 20px;
-            font-size: 14px;
+            font-size: 17px;
         }
-        
-        .footer-links a {
-            margin: 0 10px;
+
+        .footer-contact a {
+            display: inline-block;
+            padding: 8px 4px;
+            font-weight: 600;
+            word-break: break-all;
+        }
+
+        /* Respect users who ask their device to reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+
+            .cta-button-primary:hover,
+            .feature-card:hover {
+                transform: none;
+            }
         }
         
         /* Responsive */
@@ -281,7 +415,8 @@
             }
             
             .features h2,
-            .how-it-works h2 {
+            .how-it-works h2,
+            .faq h2 {
                 font-size: 28px;
             }
             
@@ -314,7 +449,8 @@
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-logo-column">
-                        <svg class="hero-logo" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="hero-logo" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logo-title">
+                            <title id="logo-title">MyChoralPart logo</title>
                             <!-- Square icon background -->
                             <rect x="40" y="40" width="140" height="140" rx="20" fill="white" stroke="#E8E8E8" stroke-width="3"/>
                             
@@ -375,7 +511,7 @@
                     <div class="feature-card">
                         <span class="feature-icon" role="img" aria-label="Sheet music">🎼</span>
                         <h3>Extensive Library</h3>
-                        <p>Quickly find the work you want to rehearse from the thousands in our library.</p>
+                        <p>Quickly find the work you want to rehearse from nearly 1,500 works by over 400 composers.</p>
                     </div>
                     
                     <div class="feature-card">
@@ -386,8 +522,8 @@
                     
                     <div class="feature-card">
                         <span class="feature-icon" role="img" aria-label="Lock">🔒</span>
-                        <h3>Private &amp; Secure</h3>
-                        <p>No registration required. Just open and start practicing.</p>
+                        <h3>No Account Needed</h3>
+                        <p>No registration and no personal details asked for. Just open and start practising.</p>
                     </div>
                 </div>
             </div>
@@ -425,6 +561,35 @@
             </div>
         </section>
 
+        <!-- FAQ Section (keep in sync with the FAQPage structured data in <head>) -->
+        <section class="faq" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Is MyChoralPart really free?</summary>
+                        <p>Yes. There are no subscriptions, no fees and no account to create. Just open the player and start practising.</p>
+                    </details>
+                    <details>
+                        <summary>Which voice parts can I practise?</summary>
+                        <p>Soprano, alto, tenor and bass. You can make your own part louder than the others, blend it with the rest of the choir, or mute it so you can sing it yourself.</p>
+                    </details>
+                    <details>
+                        <summary>What music is available?</summary>
+                        <p>Nearly 1,500 works by over 400 composers, from Handel's Messiah, Fauré's Requiem and Mozart's Requiem to Vivaldi's Gloria, Brahms' German Requiem, Mendelssohn's Elijah, Haydn's Nelson Mass and Elgar's Dream of Gerontius.</p>
+                    </details>
+                    <details>
+                        <summary>What are part-learning files?</summary>
+                        <p>They are MIDI recordings of a choral work in which each voice part is a separate track. The player uses them to bring your part to the front so you can learn the notes and rhythms by ear.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need to install anything?</summary>
+                        <p>No. MyChoralPart runs in your web browser on phones, tablets and computers.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <!-- Final CTA Section -->
         <section class="final-cta">
             <div class="container">
@@ -438,15 +603,15 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 MyChoralPart. All rights reserved.</p>
+            <p>&copy; 2025&ndash;2026 MyChoralPart. All rights reserved.</p>
             <p>Music files copyright John Hooper: <a href="https://learnchoralmusic.co.uk">learnchoralmusic.co.uk</a></p>
             <p>Made with ♪ for choir members everywhere</p>
-            <div class="footer-links">
-                <a href="mailto:hello@mychoralpart.com">Contact Us</a>
-                <!-- Add these when you have the pages ready -->
-                <!-- <a href="/privacy">Privacy Policy</a> -->
-                <!-- <a href="/terms">Terms of Use</a> -->
-            </div>
+            <p class="footer-contact">
+                Email us at <a href="mailto:hello@mychoralpart.com?subject=MyChoralPart%20enquiry">hello@mychoralpart.com</a>
+            </p>
+            <!-- Add these when you have the pages ready -->
+            <!-- <a href="/privacy">Privacy Policy</a> -->
+            <!-- <a href="/terms">Terms of Use</a> -->
         </div>
     </footer>
 </body>
